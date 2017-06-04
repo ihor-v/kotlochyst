@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>kotlochyst.com.ua</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--    Link to main.css-->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--   Header-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-right">
+                <a href="login.html"><button type="button" class="btn btn-link" style="color: gray">УВІЙТИ</button></a>
+                <a href="singin.html"><button type="button" class="btn btn-link" style="color: gray">ЗАРЕЄСТРУВАТИСЯ</button></a>
+            </div>
+        </div>
+    </div>
+    <!--    End Header-->
+    <!--   Navigation-->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="index.html">
+                    <img alt="Brand" src="src/img/logo.png" width="250px" height="auto" class="img-thumbnail" style="margin: -20% 0 0 0;">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="services.html">ПОСЛУГИ <span class="sr-only">(current)</span></a></li>
+                    <li><a href="contacts.html">КОНТАКТИ </a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ІНШЕ <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">ПРО НАС</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="faq.html">F.A.Q.</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Пошук">
+                    </div>
+                    <button type="submit" class="btn btn-default">Вперед</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--    End Navigation-->
+    <!--    Main Body-->
+    <div class="container">
+        <div class="row">
+            <!-- Map Column -->
+            <div class="col-md-8">
+                <!-- Embedded Google Map -->
+                <div id="map-container"></div>
+
+                <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+                <script>
+                    function init_map() {
+                        var var_location = new google.maps.LatLng(49.796808, 24.067966);
+
+                        var var_mapoptions = {
+                            center: var_location,
+                            zoom: 15
+                        };
+
+                        var var_marker = new google.maps.Marker({
+                            position: var_location,
+                            map: var_map,
+                            title: "Venice"
+                        });
+
+                        var var_map = new google.maps.Map(document.getElementById("map-container"),
+                            var_mapoptions);
+
+                        var_marker.setMap(var_map);
+
+                    }
+
+                    google.maps.event.addDomListener(window, 'load', init_map);
+
+                </script>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-md-4">
+                <h3>КОНТАКТИ:</h3>
+                <p>
+                    79070 ЛЬВІВ<br>СИХІВ, ВУЛ. МОРОЗНА 27<br>
+                </p>
+                <p><i class="fa fa-phone"></i>
+                    <abbr title="Phone">P</abbr>: 068 240 07 40</p>
+                <p><i class="fa fa-phone"></i>
+                    <abbr title="Phone">P</abbr>: 099 240 07 40</p>
+                <p><i class="fa fa-phone"></i>
+                    <abbr title="Phone">P</abbr>: 073 240 07 40</p>
+
+                <p><i class="fa fa-envelope-o"></i>
+                    <abbr title="Email">E</abbr>: <a href="mailto:kotlocust@gmail.com">kotlocust@gmail.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i>
+                    <abbr title="Hours">H</abbr>: ПОН. - ПТН.: 9:00 - 19:00 </p>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-md-8">
+                <h3>НАПИШІТЬ ПОВІДОМЛЕННЯ</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>ВАШЕ ІМ'Я:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Будь ласка, введіть ім'я">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>НОМЕР ТЕЛЕФОНУ:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Будь ласка, введіть номер вашого телефону">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>@-mail:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Будь ласка, введіть електронну адресу">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>ПОВІДОМЛЕННЯ:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Будь ласка, напишіть повідомлення:" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">ВІДПРАВИТИ!</button>
+                </form>
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!--    End main body-->
+    <!--    Start footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; КОТЛОЧИСТ ТМ 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--    End footer-->
+</body>
+
+</html>
